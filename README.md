@@ -5,20 +5,28 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby     2.7.0 
 
-* System dependencies
+* SQLite3  3.24.0
 
-* Configuration
+* Node.js  14.15.1
 
-* Database creation
+* Yarn     1.22.10
 
-* Database initialization
+How to run application
 
-* How to run the test suite
+1. bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+2. rake db:migrate
 
-* Deployment instructions
+3. rake db:seed
 
-* ...
+4. rails c
+
+5. run the following code:
+
+User.all.each do |u|
+	p [u.name, u.phone_number, ValidatePhoneNumber.new(user: u).validate_number]
+end;nil
+
+
