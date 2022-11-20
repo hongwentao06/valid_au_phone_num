@@ -26,7 +26,7 @@ How to run application
 5. run the following code:
 
 User.all.each do |u|
-	p [u.name, u.phone_number, ValidatePhoneNumber.new(user: u).validate_number]
+  p [u.name, u.phone_number, ValidatePhoneNumber.new(user: u).validate_number]
 end;nil
 
 
